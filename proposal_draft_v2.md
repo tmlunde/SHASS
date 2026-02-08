@@ -9,9 +9,9 @@
 
 ## 1. What Goes Unheard
 
-Science establishes truth through proof. This is its great strength — and its blind spot. What has not been proven is not thereby false. It may simply mean we have not yet looked, or that we have been looking with instruments too narrow to detect what is there. A grandmother in rural Uganda who detects malaria in her grandchild from the quality of the child's cry — hours before any biomarker confirms it — is not practicing folk belief. She is reading a communicative signal that no clinical AI system has been designed to hear. A community health worker in São Paulo who assesses a child through the timber of the mother's voice and the way the child shifts on her lap is processing diagnostic information that vanishes the moment it enters a medical record as text.
+Science establishes truth through proof. This is its great strength — and its blind spot. What has not been proven is not thereby false. It may simply mean we have not yet looked, or that we have been looking with instruments too narrow to detect what is there. Research on infant cry acoustics has demonstrated that spectral and temporal features of a child's cry carry information about neurological status, pain severity, and disease state — information that experienced caregivers have long detected intuitively and that computational analysis has begun to validate (LaGasse et al., 2005; Manfredi et al., 2009). A community health worker in São Paulo who assesses a child through the timber of the mother's voice and the way the child shifts on her lap is processing diagnostic information that vanishes the moment it enters a medical record as text. These are not exceptions. They are illustrations of a general pattern: clinical encounters are rich, multimodal communicative events, and the text record captures only a fraction of what occurs.
 
-The fact that these communicative acts have not been systematically integrated into clinical AI does not mean they lack clinical value. It means we built our systems without listening for them.
+The fact that these communicative dimensions have not been systematically integrated into clinical AI does not mean they lack clinical value. It means we built our systems without listening for them.
 
 On January 15, 2026, we convened approximately 100 participants from diverse backgrounds — clinicians, linguists, AI researchers, ethicists, indigenous knowledge keepers, artists, students — at MIT, with support from the American Medical Association, to ask a question that clinical AI has not yet seriously confronted: *what are the languages of healing, and how many of them can our systems actually hear?* The answer that emerged was stark: clinical AI, as currently built, captures almost none of them.
 
@@ -21,9 +21,7 @@ Clinical artificial intelligence is built on a narrow communicative foundation: 
 
 This is not a new question in the abstract. A substantial body of research in non-verbal communication, clinical linguistics, and medical anthropology has long documented that paralinguistic cues, body language, and narrative context matter in clinical encounters (Roter & Hall, 2006; Heritage & Maynard, 2006; Mattingly, 1998). What *is* new — and what creates the urgency for this project — is the emergence of clinical AI systems that are being deployed globally on the basis of text alone, at a scale and speed that amplifies the textual reduction from an individual clinical limitation into a systematic, structural one. Every clinical AI system trained on medical records inherits and entrenches the assumption that what was documented is what matters. As these systems reach communities where health knowledge is transmitted orally, prosodically, or through embodied practice, the consequences of this assumption become acute.
 
-A recent *Nature* commentary argues that artificial intelligence has achieved general intelligence, and that we must now "accept that there are more kinds of minds than we had previously entertained" (Chen et al., *Nature* 650, 2026). The authors make this case by showing that intelligence is a functional property independent of substrate — it can be realized in biological or computational systems. We suggest the same logic applies to clinical communication: the information relevant to health and healing is not bound to any single medium. It can be carried in text, yes — but also in prosody, in silence, in narrative structure, in rhythm, in the relational dynamics of an encounter. The question is not philosophical but empirical: how much of this information survives the reduction to text, and what are the clinical consequences when it does not?
-
-This project answers that question. We conduct the first systematic, cross-linguistic study of **communicative information loss at the documentation boundary** in clinical encounters — measuring what is present in the full multimodal encounter that disappears when it becomes a medical record. We focus on two domains where the loss is likely greatest and most consequential: **prosody and paralinguistic features** (what text strips from speech) and **undocumented oral health narratives** (health communication that occurs entirely outside clinical records). The findings will establish an empirical foundation for rethinking what clinical AI needs to hear — and provide concrete design principles for building systems that can.
+This project answers that question. We conduct the first systematic study of **communicative information loss at the documentation boundary** in clinical encounters — measuring what is present in the full multimodal encounter that disappears when it becomes a medical record. We focus on two domains where the loss is likely greatest and most consequential: **prosody and paralinguistic features** (what text strips from speech) and **undocumented oral health narratives** (health communication that occurs entirely outside clinical records). We conduct this analysis in two language contexts — English and one additional language — to generate initial evidence on whether the pattern of loss varies across clinical cultures. The findings will establish an empirical foundation for rethinking what clinical AI needs to hear — and provide concrete design principles for building systems that can.
 
 ---
 
@@ -52,13 +50,15 @@ We propose a 12-month program with two empirical studies and one synthesis compo
 
 **Research question:** How much clinically relevant communicative information is present in the full multimodal clinical encounter but absent from the corresponding text record?
 
-**Method:** We analyze clinical encounters that exist in both audio/video and text form, comparing the communicative content available in each modality. We draw on three data sources:
+**Method and data sources:** The core design is a paired comparison: record clinical encounters in full multimodal form (audio at minimum, video where feasible), then compare the communicative content of the recording against the clinician's corresponding text documentation. The primary data source is prospective:
 
-1. **MIMIC and PhysioNet infrastructure.** The MIMIC database includes clinical notes that correspond to documented encounters. Where audio or video recordings of clinical encounters are available through affiliated research programs (e.g., through existing clinical communication research corpora), we pair them with the corresponding documentation.
+**Prospective multimodal recordings (primary).** Working with clinical partners through MIT Critical Data's network, we record 40–60 clinical encounters (with full informed consent and IRB approval) across two language contexts: English (at a US partner site) and one additional language — Portuguese (via existing Brazil partnerships) or Luganda (via Uganda partnerships). The target of 20–30 encounters per language context provides sufficient material for the CCA protocol to identify patterns of communicative loss while remaining feasible within the project timeline and budget. Each encounter is analyzed in both its full recorded form and its corresponding text documentation.
 
-2. **Prospective multimodal recordings.** Working with clinical partners through MIT Critical Data's network, we record a targeted sample of clinical encounters (with full informed consent and IRB approval) in at least two language contexts — English and one additional language (Portuguese via Brazil or Luganda via Uganda partnerships). Each encounter is analyzed in both its full multimodal form and its documented text form.
+**Existing clinical communication corpora (supplementary).** Several research groups have assembled recorded clinical encounter datasets for communication research (e.g., the Verilogue physician-patient dialogue database; recorded encounters from medical education programs). Where accessible, we use these to expand the English-language sample and test the CCA protocol on encounters not collected by our team, strengthening the protocol's generalizability.
 
-3. **Cross-linguistic comparison.** By conducting the study in two language contexts, we test whether the *pattern* of communicative loss differs across languages — whether different languages and clinical cultures lose different information at the documentation boundary.
+**MIMIC/PhysioNet contextual analysis.** While MIMIC does not contain encounter audio, its extensive clinical notes provide the landscape against which our findings are interpreted. We use MIMIC to characterize the documentation patterns (note structure, content categories, information density) that our recorded encounters are compared against, and to test whether NLP-detectable features of notes (hedging, uncertainty markers, affective language) correlate with the prosodic and paralinguistic features identified in our recorded sample.
+
+By conducting the study across two language contexts, we generate initial evidence on whether the pattern of communicative loss differs across clinical cultures — recognizing that two languages provide a meaningful paired comparison but not a generalizable claim. The cross-linguistic dimension is framed as hypothesis-generating for a larger follow-on study.
 
 **Analytical framework:** Per Urlaub leads the development of a **Communicative Content Analysis (CCA)** protocol — a systematic method for coding the communicative content of clinical encounters across modalities. The protocol identifies categories of clinically relevant communicative acts and tracks which survive the documentation boundary and which do not. Categories include:
 
@@ -78,18 +78,21 @@ We propose a 12-month program with two empirical studies and one synthesis compo
 
 **Research question:** What clinically relevant communicative acts occur in community health conversations that exist entirely outside clinical documentation systems?
 
-**Method:** Working with community health workers in MIT Critical Data's partner sites, we document and analyze health conversations that occur outside clinical encounters: family discussions about symptoms, community advice-giving, oral transmission of health knowledge, storytelling about illness and recovery. These conversations are recorded (with consent), transcribed, and analyzed using the CCA protocol developed in Study 1 — extended to capture narrative structure, communal reasoning, and intergenerational knowledge transmission.
+**Method and sample:** Working with community health worker (CHW) networks in MIT Critical Data's partner sites in Brazil and Uganda, we use purposive sampling to record 30–40 community health conversations (15–20 per site) that occur outside clinical encounters. CHWs identify and recruit participants engaged in naturally occurring health communication: family discussions about symptoms or treatment decisions, community advice-giving following a health event, intergenerational transmission of health knowledge, and storytelling about illness and recovery. Conversations are audio-recorded with informed consent, transcribed, translated where necessary, and analyzed using the CCA protocol developed in Study 1 — extended to capture narrative structure, communal reasoning, and intergenerational knowledge transmission.
 
-This study addresses the second mechanism of the textual presumption: not what is lost when encounters are documented, but what is never captured because it occurs outside the clinical system entirely. We analyze:
+This study addresses the second mechanism of the textual presumption: not what is lost when encounters are documented, but what is never captured because it occurs outside the clinical system entirely.
 
-- What health knowledge is communicated in these conversations (symptom interpretation, treatment decisions, prognostic reasoning, emotional regulation)
-- What communicative modalities carry this knowledge (oral narrative, prosodic emphasis, communal deliberation)
-- How this knowledge relates to formal clinical assessments — where it converges, diverges, or provides information unavailable through clinical channels
-- Whether and how clinical AI systems could be designed to engage with this communicative domain, and what ethical constraints must govern such engagement
+**What counts as a finding:** For each recorded conversation, we code whether it contains clinically relevant content in four domains: (1) symptom interpretation or health assessment, (2) treatment reasoning or decision-making, (3) prognostic or preventive reasoning, (4) emotional regulation or psychosocial support related to health. We then assess: what proportion of these conversations contain clinically relevant content that does not appear in any corresponding clinical record for the individuals involved? Where participants have concurrent clinical records (through CHW documentation or facility records), we conduct a direct comparison. Where they do not — which we expect to be common — the absence of any clinical record *is itself the finding*: clinically relevant communication that is entirely invisible to documentation systems.
+
+We further analyze:
+
+- What communicative modalities carry this knowledge (oral narrative, prosodic emphasis, communal deliberation, embodied demonstration)
+- Whether the content converges with, diverges from, or supplements formal clinical assessments
+- What ethical constraints must govern any engagement of clinical AI with community health communication — particularly regarding consent, surveillance risk, and the right to communicative privacy
 
 **Deliverables:**
-- A documented corpus of community health conversations from at least two cultural/linguistic contexts
-- Analysis of clinically relevant content in undocumented health communication
+- A documented and coded corpus of 30–40 community health conversations from two cultural/linguistic contexts
+- Quantified analysis of clinically relevant content in undocumented health communication, broken down by domain and modality
 - Ethical framework for engaging with community health communication in AI development (building on Celi's BODHI principles and community-partnered research methodology)
 - At least one empirical publication
 
@@ -99,6 +102,8 @@ This study addresses the second mechanism of the textual presumption: not what i
 The empirical findings from Studies 1 and 2 are synthesized into a **Communicative Health Framework** — a formal account of the communicative landscape of health that maps which domains clinical AI currently captures, which it misses, and what would be required to close the gap. The framework is organized along two axes: **modality** (text, prosodic, paralinguistic, narrative, somatic, musical, environmental) and **documentation status** (captured in clinical records, present in encounters but lost at documentation, occurring entirely outside clinical systems).
 
 The framework is deliberately broader than what the empirical studies can validate in 12 months. This is by design: the studies establish rigorous evidence for two key domains (prosodic/paralinguistic features and undocumented oral narratives), while the framework maps the wider communicative territory — including musical, somatic, environmental, and ecological modalities — as an empirically motivated research agenda rather than a speculative claim.
+
+**If the findings are null — if text captures more communicative content than hypothesized — this is equally valuable.** A finding that documentation preserves most clinically relevant information would provide the first empirical validation of the textual foundation on which clinical AI currently rests. More likely, we expect the degree of loss to vary substantially by encounter type and communicative category, which would allow us to identify *where* the textual presumption is most costly (we hypothesize: mental health, pain, pediatrics, end-of-life, interpreter-mediated encounters) and where text-based AI may be adequate. Either outcome informs clinical AI design; only the absence of measurement leaves the field guessing.
 
 The synthesis phase produces:
 
@@ -123,9 +128,9 @@ The synthesis phase produces:
 **Why now:**
 
 - Clinical AI systems are being deployed globally into communities where health communication extends far beyond text — making the textual presumption's consequences urgent and measurable
-- The convergence of research on non-verbal clinical communication, narrative medicine, and AI fairness has created the intellectual preconditions for this synthesis, but no one has connected these fields to clinical AI architecture
-- The January 15, 2026 convening demonstrated both the demand for and the feasibility of this interdisciplinary conversation
-- The recognition that intelligence itself may be substrate-independent (Chen et al., *Nature* 650, 2026) opens conceptual space for taking seriously the idea that health-relevant communication may likewise be medium-independent — an argument this project tests empirically rather than merely asserting
+- The convergence of research on non-verbal clinical communication, narrative medicine, and AI fairness has created the intellectual preconditions for this synthesis, but no one has yet connected these fields to clinical AI architecture — the gap this project fills
+- The January 15, 2026 convening at MIT demonstrated both the demand for and the feasibility of this interdisciplinary conversation
+- More broadly, the growing recognition that intelligence and communication may take forms very different from those assumed in Western computational traditions (Chen et al., *Nature* 650, 2026) is creating intellectual openness to re-examining what clinical AI treats as given — an openness this project channels into empirical research
 
 ---
 
@@ -191,6 +196,10 @@ Hobbs, P. "The role of progress notes in the professional socialization of medic
 Kleinman, A. *The Illness Narratives: Suffering, Healing, and the Human Condition.* Basic Books (1988).
 
 Koss-Chioino, J.D. "Spiritual transformation, relation, and radical empathy: Core components of the ritual healing process." *Transcultural Psychiatry* 43(4), 652–670 (2006).
+
+LaGasse, L.L., Neal, A.R. & Lester, B.M. "Assessment of infant cry: Acoustic cry analysis and parental perception." *Mental Retardation and Developmental Disabilities Research Reviews* 11(1), 83–93 (2005).
+
+Manfredi, C. et al. "Criteria for estimating fundamental frequency of infant cry." *Journal of Voice* 23(2), 128–137 (2009).
 
 Mattingly, C. *Healing Dramas and Clinical Plots: The Narrative Structure of Experience.* Cambridge University Press (1998).
 
