@@ -43,7 +43,7 @@ These two mechanisms — truncation and exclusion — are analytically distinct 
 
 ## 3. Research Program
 
-We propose a 12-month program with two empirical studies and one synthesis component. The program is designed to produce measurable findings, a validated analytical methodology, and a theoretical framework — grounding the broader vision in concrete results.
+We propose a program with two empirical studies and one synthesis component, designed to produce measurable findings, a validated analytical methodology, and a theoretical framework — grounding the broader vision in concrete results. We present a 12-month timeline below, but note that the SHASS+ Fund permits spreading one year of funding over 18–24 months. We are prepared to use an 18-month timeline if IRB processes or postdoc recruitment require it, which would strengthen rather than weaken the empirical work. Pre-submission consultations with the MIT IRB (for Study 1's US recordings) and with local ethics review contacts at our Brazil and Uganda partner sites (for Study 2) are underway; the timeline below reflects an optimistic but realistic projection based on these conversations.
 
 ### Study 1: Quantifying Communicative Loss at the Documentation Boundary (Months 1–8)
 *Lead: Per Urlaub and Leo Celi (joint)*
@@ -67,8 +67,10 @@ By conducting the study across two language contexts, we generate initial eviden
 - **Discourse structure:** How the conversation unfolds — topic initiation, interruptions, hedging, narrative sequencing — versus how it is documented
 - **Relational dynamics:** Expressions of trust, hesitation, deference, or resistance that are legible in interaction but invisible in records
 
+**CCA validation:** The protocol is validated through a structured inter-rater reliability process. Following initial development by the postdoc and PI Urlaub, two independent coders (the graduate RA and one additional trained coder) apply the CCA to a subset of 10 encounters. We measure inter-rater agreement using Cohen's kappa, with a target of κ ≥ 0.70 for each coding category. Categories falling below this threshold are iteratively refined — through discussion, exemplar coding, and category redefinition — until acceptable reliability is achieved. This process is documented as part of the protocol itself, making the validation methodology transparent and replicable by other research groups.
+
 **Deliverables:**
-- A validated CCA protocol applicable to clinical encounters in any language
+- A validated CCA protocol with documented inter-rater reliability, applicable to clinical encounters in any language
 - Quantified estimates of communicative information loss at the documentation boundary, broken down by category and language context
 - Identification of specific clinical scenarios where the loss is greatest (we hypothesize: mental health assessment, pain evaluation, pediatric encounters, end-of-life conversations, and any encounter mediated by an interpreter)
 - At least one empirical publication documenting these findings
@@ -153,12 +155,12 @@ The synthesis phase produces:
 
 | Category | Amount | Notes |
 |---|---|---|
-| Postdoctoral researcher (clinical linguistics / multimodal discourse analysis) | $65,000 | 60% FTE, joint supervision — leads CCA protocol development and both study analyses |
-| Graduate research assistant (SHASS — linguistic analysis) | $25,000 | Study 1 coding and cross-linguistic analysis |
+| Postdoctoral researcher (clinical linguistics / multimodal discourse analysis) | $65,000 | 60% FTE, joint supervision — leads CCA protocol development and Study 1 analysis. Recruitment begins immediately upon award; both PIs have identified candidates through existing networks in clinical linguistics. If recruitment is delayed, the 18-month timeline option absorbs the gap, and PIs lead initial CCA development directly. |
+| Graduate research assistant (SHASS — linguistic analysis) | $25,000 | Study 1 inter-rater coding, cross-linguistic analysis, and primary coding responsibility for Study 2 — distributing analytical load across the team |
 | Prospective clinical encounter recording (Study 1) | $15,000 | Recording equipment, consent coordination, transcription at 2 sites |
-| Community health conversation documentation (Study 2) | $20,000 | Field recording, community compensation, transcription/translation across 2 partner sites |
+| Community health conversation documentation (Study 2) | $25,000 | Field recording equipment, local research coordinator support at each site, community compensation for participants (co-designed with local partners following BODHI principles), and transcription/translation across 2 partner sites |
 | Computational analysis (MIMIC/PhysioNet) | $10,000 | Computing resources, NLP tools for paired text-audio analysis |
-| Capstone Convening: "The Languages of Healing" | $20,000 | Travel support for 15–20 participants including international community practitioners; 2-day event at MIT |
+| Capstone Convening: "The Languages of Healing" | $15,000 | Travel support for 12–15 participants including international community practitioners; 2-day event at MIT |
 | Translation, interpretation, and accessibility | $10,000 | |
 | Publication (open access) and dissemination | $5,000 | |
 | PI summer salary support | $10,000 | |
